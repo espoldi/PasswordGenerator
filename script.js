@@ -22,11 +22,11 @@ function generatePassword() {
     let lengthInput = prompt("How long should the password be? Pick a number between 8 and 128.");
 
     // Password length varification
-    let length = parseInt(lengthInput, 10);
+    var passlength = parseInt(lengthInput, 10);
 
-    if((length > 7) && (length < 129)) {
+    if((passlength > 7) && (passlength < 129)) {
       
-      confirm("Thank you, your password will be " + length + " characters long.");}
+      confirm("Thank you, your password will be " + passlength + " characters long.");}
 
     else {
       confirm("Password length not valid.");
@@ -137,7 +137,11 @@ upper();
   special();
 
 
-  // When all prompts are completed, generate password with matching criteria
-  // add each type with each Y to an array, pull random index and add to end of password in a loop length
-  return ; 
+  // Pull random index from characters array for each digit of the password
+  for(let i = 0; i < passlength; i++) {
+    var passGen = passGen + characters[Math.floor(Math.random()*characters.length)];
+    console.log(passGen);
+  }
+  
+  return passGen;
 }
