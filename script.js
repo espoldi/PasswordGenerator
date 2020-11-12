@@ -84,7 +84,11 @@ lower();
         break;
     }
   }
-  
+
+// Execute uppercase letter inclusion
+upper();
+
+
   let numInput = prompt("Include numbers? Y or N");
    
   switch(numInput) {
