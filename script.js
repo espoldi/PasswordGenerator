@@ -34,11 +34,17 @@ function generatePassword() {
   let lowerInput = prompt("Include lowercase letters? Y or N");
       
     switch(lowerInput) {
-        case "Y": characters.push("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z");
+        case "Y", "y":
+          characters.push("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z");
+          break;
 
-        case "N": 
+        case "N", "n":
+          confirm("O.K.");
+          break;
 
-        default: 
+        default:
+          
+          break;
       }
 
   let upperInput = prompt("Include uppercase letters? Y or N");
