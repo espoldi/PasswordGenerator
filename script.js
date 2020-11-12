@@ -112,15 +112,29 @@ upper();
   // Execute numbers inclusion
   int();
 
-  let specialInput = prompt("Include special characters? Y or N");
+    // Function for special characters
+  function special() {
+    let specialInput = prompt("Include special characters? Y or N");
    
-  switch(specialInput) {
-    case "Y": 
+    switch(specialInput) {
+      case "Y", "y":
+        characters.push("!", "\"", "#", "$", "%", "&", "\'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "\`", "{", "|", "}", "~");
+        confirm("Special characters selected.");
+        break;
 
-    case "N": 
+      case "N", "n":
+        confirm("O.K.");
+        break;
 
-    default: 
+      default:
+        confirm("Invalid input.");
+        special();
+        break;
+    }
   }
+
+  // Execute special character inclusion
+  special();
 
 
   // When all prompts are completed, generate password with matching criteria
