@@ -15,27 +15,7 @@ generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
 
-  // Function for password length
-  function passwordLength() {
   
-    // Prompt for length between 8 and 128 characters
-    let lengthInput = prompt("How long should the password be? Pick a number between 8 and 128.");
-
-    // Password length varification
-    var passlength = parseInt(lengthInput, 10);
-
-    if((passlength > 7) && (passlength < 129)) {
-      
-      confirm("Thank you, your password will be " + passlength + " characters long.");}
-
-    else {
-      confirm("Password length not valid.");
-      passwordLength();}
-  }
-
-// Execute password length function
-passwordLength();
-
   //Declare array for character types
   let characters = [];
 
@@ -136,10 +116,26 @@ upper();
   // Execute special character inclusion
   special();
 
+  // Prompt for length between 8 and 128 characters
+  let lengthInput = prompt("How long should the password be? Pick a number between 8 and 128.");
+
+  // Password length varification
+  var passlength = parseInt(lengthInput, 10);
+
+  if((passlength > 7) && (passlength < 129)) {
+    
+    confirm("Thank you, your password will be " + passlength + " characters long.");}
+
+  else {
+    confirm("Password length not valid.");
+    passwordLength();}
+
+  // Declare variable to hold generated password
+  var passGen = "";
 
   // Pull random index from characters array for each digit of the password
   for(let i = 0; i < passlength; i++) {
-    var passGen = passGen + characters[Math.floor(Math.random()*characters.length)];
+    passGen = passGen + characters[Math.floor(Math.random()*characters.length)];
     console.log(passGen);
   }
   
