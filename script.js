@@ -28,7 +28,15 @@ function generatePassword() {
     else {confirm("Password length not valid.");}
   
   // Prompt for character types
-      // switch? lowercase, uppercase, numeric, special
+  let lowerInput = prompt("Include lowercase letters? Y or N");
+
+  let upperInput = prompt("Include uppercase letters? Y or N");
+
+  let numInput = prompt("Include numbers? Y or N");
+
+  let specialInput = prompt("Include special characters? Y or N");
+
+
   // When all prompts are completed, generate password with matching criteria
   return ; 
 }
