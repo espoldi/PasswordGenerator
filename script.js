@@ -39,12 +39,15 @@ passwordLength();
   //Declare array for character types
   let characters = [];
 
-  // Prompt for character types
-  let lowerInput = prompt("Include lowercase letters? Y or N");
+  // Function for lowercase letters
+  function lower() {
+
+    let lowerInput = prompt("Include lowercase letters? Y or N");
       
     switch(lowerInput) {
         case "Y", "y":
           characters.push("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z");
+          confirm("Lowercase letters selected.");
           break;
 
         case "N", "n":
@@ -52,9 +55,14 @@ passwordLength();
           break;
 
         default:
-          
+          confirm("Invalid input.");
+          lower();
           break;
       }
+  }
+
+// Execute lowercase letter inclusion
+lower();
 
   let upperInput = prompt("Include uppercase letters? Y or N");
    
