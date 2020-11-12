@@ -64,16 +64,27 @@ passwordLength();
 // Execute lowercase letter inclusion
 lower();
 
-  let upperInput = prompt("Include uppercase letters? Y or N");
+  // Function for uppercase letters
+  function upper() {
+    let upperInput = prompt("Include uppercase letters? Y or N");
    
-  switch(upperInput) {
-    case "Y": 
+    switch(upperInput) {
+      case "Y", "y":
+        characters.push("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z");
+        confirm("Uppercase letters selected.");
+        break;
 
-    case "N": 
+      case "N", "n":
+        confirm("O.K.");
+        break; 
 
-    default: 
+      default:
+        confirm("Invalid input.");
+        upper();
+        break;
+    }
   }
-
+  
   let numInput = prompt("Include numbers? Y or N");
    
   switch(numInput) {
