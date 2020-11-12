@@ -20,11 +20,12 @@ function generatePassword() {
 
   // Password length varification
   let length = parseInt(lengthInput, 10);
-    if(length < 8) {confirm("Password length too short.");}
 
-      else if(length > 128) {confirm("Password length too long.")}
+    if((length > 7) && (length < 129)) {
+      
+      confirm("Thank you, your password will be " + length + " characters long.");}
 
-      else {confirm("Thank you, your password will be " + length + " characters long.");}
+    else {confirm("Password length not valid.");}
   
   // Prompt for character types
       // switch? lowercase, uppercase, numeric, special
