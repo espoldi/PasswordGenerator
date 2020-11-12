@@ -15,18 +15,27 @@ generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
 
-  // Prompt for length between 8 and 128 characters
-  let lengthInput = prompt("How long should the password be? Pick a number between 8 and 128.");
+  // Function for password length
+  function passwordLength() {
+  
+    // Prompt for length between 8 and 128 characters
+    let lengthInput = prompt("How long should the password be? Pick a number between 8 and 128.");
 
-  // Password length varification
-  let length = parseInt(lengthInput, 10);
+    // Password length varification
+    let length = parseInt(lengthInput, 10);
 
     if((length > 7) && (length < 129)) {
       
       confirm("Thank you, your password will be " + length + " characters long.");}
 
-    else {confirm("Password length not valid.");}
-  
+    else {
+      confirm("Password length not valid.");
+      passwordLength();}
+  }
+
+// Execute password length function
+passwordLength();
+
   //Declare array for character types
   let characters = [];
 
