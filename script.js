@@ -27,11 +27,14 @@ function generatePassword() {
 
     else {confirm("Password length not valid.");}
   
+  //Declare array for character types
+  let characters = [];
+
   // Prompt for character types
   let lowerInput = prompt("Include lowercase letters? Y or N");
       
     switch(lowerInput) {
-        case "Y": 
+        case "Y": characters.push("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z");
 
         case "N": 
 
