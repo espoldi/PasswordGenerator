@@ -88,16 +88,29 @@ lower();
 // Execute uppercase letter inclusion
 upper();
 
-
-  let numInput = prompt("Include numbers? Y or N");
+  // Function for number characters
+  function int() {
+    let numInput = prompt("Include numbers? Y or N");
    
-  switch(numInput) {
-    case "Y": 
+    switch(numInput) {
+      case "Y", "y":
+        characters.push("0", "1", "2", "3", "4", "5", "6", "7", "8", "9");
+        confirm("Numbers selected.");
+        break;
 
-    case "N": 
+      case "N", "n":
+        confirm("O.K.");
+        break;
 
-    default: 
+      default:
+        confirm("invalid input.");
+        int();
+        break;
+    }
   }
+
+  // Execute numbers inclusion
+  int();
 
   let specialInput = prompt("Include special characters? Y or N");
    
