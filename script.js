@@ -29,14 +29,47 @@ function generatePassword() {
   
   // Prompt for character types
   let lowerInput = prompt("Include lowercase letters? Y or N");
+      
+    switch(lowerInput) {
+        case "Y": 
+
+        case "N": 
+
+        default: 
+      }
 
   let upperInput = prompt("Include uppercase letters? Y or N");
+   
+  switch(upperInput) {
+    case "Y": 
+
+    case "N": 
+
+    default: 
+  }
 
   let numInput = prompt("Include numbers? Y or N");
+   
+  switch(numInput) {
+    case "Y": 
+
+    case "N": 
+
+    default: 
+  }
 
   let specialInput = prompt("Include special characters? Y or N");
+   
+  switch(specialInput) {
+    case "Y": 
+
+    case "N": 
+
+    default: 
+  }
 
 
   // When all prompts are completed, generate password with matching criteria
+  // add each type with each Y to an array, pull random index and add to end of password in a loop length
   return ; 
 }
